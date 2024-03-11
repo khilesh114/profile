@@ -13,41 +13,15 @@
  <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> -->
   <!--Replace with your tailwind.css once created-->
   <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="style1.css"/>
+ <!-- <link rel="stylesheet" href="style1.css"/> -->
 </head>
 
 
 <!-- <body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-image:url('https://source.unsplash.com/1L71sPT5XKc');"> -->
-<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider">
+<!--<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider"> -->
 
-		<script>
-			// Function to change the background image every 4 seconds
-			function changeBackground() {
-				const body = document.body;
-				const images = [
-					'https://bugreport11414.github.io/wallpaper/imge/p1.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p2.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p3.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p4.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p5.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p6.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p7.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p8.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p9.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p10.jpg',
-					'https://bugreport11414.github.io/wallpaper/imge/p11.jpg',
-				];
-				let currentIndex = 0;
-		
-				setInterval(() => {
-					body.style.backgroundImage = `url('${images[currentIndex]}')`;
-					currentIndex = (currentIndex + 1) % images.length;
-				}, 4000);
-			}
-		
-			// Call the function to start changing the background
-			changeBackground();
-		</script>
+	
+	
   <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
     
 	<!--Main Col-->
@@ -100,12 +74,40 @@
 	  </div>
 
 </div>
+<style>
+	body, html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#video-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		z-index: -1;
+	}
+
+	#background-video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+</style>
+</head>
+<body>
+
 <div id="video-container">
-    <video autoplay muted loop id="background-video">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+<video autoplay muted loop id="background-video">
+	<source src="video.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
 </div>
+
 	<script>
 		//Init tooltips
 		tippy('.link',{
